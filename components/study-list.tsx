@@ -127,13 +127,132 @@ export default function StudyList({ onSelectStudy }: { onSelectStudy: (id: strin
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-950 via-blue-950 to-slate-900">
+    <div className="relative min-h-screen overflow-hidden" style={{ background: "linear-gradient(to bottom right, rgb(2 6 23), rgb(30 58 138), rgb(15 23 42))" }}>
+      {/* Animated Background Blobs */}
+      <div className="absolute inset-0 overflow-hidden pointer-events-none" style={{ zIndex: 0 }}>
+        {/* Blue Blob */}
+        <motion.div
+          className="absolute rounded-full"
+          style={{
+            width: "600px",
+            height: "600px",
+            background: "radial-gradient(circle, rgba(59, 130, 246, 0.4) 0%, rgba(59, 130, 246, 0.1) 50%, rgba(59, 130, 246, 0) 100%)",
+            filter: "blur(80px)",
+            top: "-10%",
+            left: "-10%",
+          }}
+          animate={{
+            x: [0, 200, -150, 0],
+            y: [0, -150, 200, 0],
+            scale: [1, 1.3, 0.8, 1],
+          }}
+          transition={{
+            duration: 8,
+            repeat: Infinity,
+            ease: "easeInOut",
+          }}
+        />
+        
+        {/* Purple Blob */}
+        <motion.div
+          className="absolute rounded-full"
+          style={{
+            width: "500px",
+            height: "500px",
+            background: "radial-gradient(circle, rgba(139, 92, 246, 0.35) 0%, rgba(139, 92, 246, 0.1) 50%, rgba(139, 92, 246, 0) 100%)",
+            filter: "blur(80px)",
+            top: "50%",
+            right: "10%",
+          }}
+          animate={{
+            x: [0, -180, 120, 0],
+            y: [0, 150, -100, 0],
+            scale: [1, 0.7, 1.4, 1],
+          }}
+          transition={{
+            duration: 10,
+            repeat: Infinity,
+            ease: "easeInOut",
+          }}
+        />
+        
+        {/* Green Blob */}
+        <motion.div
+          className="absolute rounded-full"
+          style={{
+            width: "700px",
+            height: "700px",
+            background: "radial-gradient(circle, rgba(34, 197, 94, 0.3) 0%, rgba(34, 197, 94, 0.08) 50%, rgba(34, 197, 94, 0) 100%)",
+            filter: "blur(80px)",
+            bottom: "10%",
+            left: "20%",
+          }}
+          animate={{
+            x: [0, 200, -150, 0],
+            y: [0, -120, 100, 0],
+            scale: [1, 1.2, 0.9, 1],
+          }}
+          transition={{
+            duration: 12,
+            repeat: Infinity,
+            ease: "easeInOut",
+          }}
+        />
+        
+        {/* Pink Blob */}
+        <motion.div
+          className="absolute rounded-full"
+          style={{
+            width: "400px",
+            height: "400px",
+            background: "radial-gradient(circle, rgba(236, 72, 153, 0.35) 0%, rgba(236, 72, 153, 0.1) 50%, rgba(236, 72, 153, 0) 100%)",
+            filter: "blur(80px)",
+            top: "20%",
+            left: "60%",
+          }}
+          animate={{
+            x: [0, -120, 90, 0],
+            y: [0, 150, -80, 0],
+            scale: [1, 1.2, 0.8, 1],
+          }}
+          transition={{
+            duration: 9,
+            repeat: Infinity,
+            ease: "easeInOut",
+          }}
+        />
+        
+        {/* Cyan Blob */}
+        <motion.div
+          className="absolute rounded-full"
+          style={{
+            width: "550px",
+            height: "550px",
+            background: "radial-gradient(circle, rgba(6, 182, 212, 0.3) 0%, rgba(6, 182, 212, 0.08) 50%, rgba(6, 182, 212, 0) 100%)",
+            filter: "blur(80px)",
+            bottom: "30%",
+            right: "30%",
+          }}
+          animate={{
+            x: [0, 100, -130, 0],
+            y: [0, -100, 130, 0],
+            scale: [1, 1.1, 0.95, 1],
+          }}
+          transition={{
+            duration: 11,
+            repeat: Infinity,
+            ease: "easeInOut",
+          }}
+        />
+      </div>
+
       {/* Header */}
       <motion.div
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
-        className="border-b border-blue-800/30 bg-slate-900/50 backdrop-blur-xl"
+        className="relative border-b border-blue-800/30 bg-slate-900/50 backdrop-blur-xl"
+        style={{ zIndex: 10 }}
       >
         <div className="mx-auto max-w-7xl px-6 py-6">
           <div className="flex items-center justify-between">
@@ -150,7 +269,7 @@ export default function StudyList({ onSelectStudy }: { onSelectStudy: (id: strin
       </motion.div>
 
       {/* Main Content */}
-      <div className="mx-auto max-w-7xl px-6 py-8">
+      <div className="relative mx-auto max-w-7xl px-6 py-8" style={{ zIndex: 10 }}>
         <StudyFilters
           filters={filters}
           onFilterChange={setFilters}
