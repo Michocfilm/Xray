@@ -142,14 +142,14 @@ export default function StudyList({ onSelectStudy }: { onSelectStudy: (id: strin
             left: "-10%",
           }}
           animate={{
-            x: [0, 200, -150, 0],
-            y: [0, -150, 200, 0],
-            scale: [1, 1.3, 0.8, 1],
+            x: [0, 300, 500, 300, 0, -200, -400, -200, 0],
+            y: [0, -200, -100, 100, 200, 300, 200, 100, 0],
+            scale: [1, 1.2, 1.4, 1.1, 0.9, 1.1, 1.3, 1, 1],
           }}
           transition={{
-            duration: 8,
+            duration: 20,
             repeat: Infinity,
-            ease: "easeInOut",
+            ease: "linear",
           }}
         />
         
@@ -165,14 +165,14 @@ export default function StudyList({ onSelectStudy }: { onSelectStudy: (id: strin
             right: "10%",
           }}
           animate={{
-            x: [0, -180, 120, 0],
-            y: [0, 150, -100, 0],
-            scale: [1, 0.7, 1.4, 1],
+            x: [0, -250, -400, -300, -100, 100, 300, 200, 0],
+            y: [0, 200, 100, -100, -200, -300, -200, -50, 0],
+            scale: [1, 0.8, 1.2, 1.4, 1.1, 0.9, 1.2, 1, 1],
           }}
           transition={{
-            duration: 10,
+            duration: 25,
             repeat: Infinity,
-            ease: "easeInOut",
+            ease: "linear",
           }}
         />
         
@@ -188,14 +188,14 @@ export default function StudyList({ onSelectStudy }: { onSelectStudy: (id: strin
             left: "20%",
           }}
           animate={{
-            x: [0, 200, -150, 0],
-            y: [0, -120, 100, 0],
-            scale: [1, 1.2, 0.9, 1],
+            x: [0, 400, 600, 400, 200, 0, -200, -400, 0],
+            y: [0, -150, -50, 50, 150, 250, 200, 100, 0],
+            scale: [1, 1.3, 1.1, 0.9, 1.1, 1.2, 1, 1.1, 1],
           }}
           transition={{
-            duration: 12,
+            duration: 30,
             repeat: Infinity,
-            ease: "easeInOut",
+            ease: "linear",
           }}
         />
         
@@ -211,14 +211,14 @@ export default function StudyList({ onSelectStudy }: { onSelectStudy: (id: strin
             left: "60%",
           }}
           animate={{
-            x: [0, -120, 90, 0],
-            y: [0, 150, -80, 0],
-            scale: [1, 1.2, 0.8, 1],
+            x: [0, -300, -500, -400, -200, 0, 200, 400, 0],
+            y: [0, 250, 350, 300, 200, 100, 0, -100, 0],
+            scale: [1, 1.2, 1.4, 1.1, 0.8, 1, 1.2, 1.1, 1],
           }}
           transition={{
-            duration: 9,
+            duration: 18,
             repeat: Infinity,
-            ease: "easeInOut",
+            ease: "linear",
           }}
         />
         
@@ -234,14 +234,14 @@ export default function StudyList({ onSelectStudy }: { onSelectStudy: (id: strin
             right: "30%",
           }}
           animate={{
-            x: [0, 100, -130, 0],
-            y: [0, -100, 130, 0],
-            scale: [1, 1.1, 0.95, 1],
+            x: [0, 200, 400, 500, 400, 200, 0, -200, 0],
+            y: [0, -200, -300, -200, -100, 0, 100, 200, 0],
+            scale: [1, 1.1, 1.3, 1.2, 1, 0.9, 1.1, 1.2, 1],
           }}
           transition={{
-            duration: 11,
+            duration: 22,
             repeat: Infinity,
-            ease: "easeInOut",
+            ease: "linear",
           }}
         />
       </div>
